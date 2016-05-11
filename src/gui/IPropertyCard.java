@@ -1,13 +1,15 @@
 public interface IPropertyCard
 {
+	//Constructor would have the parameters for "cost", "color", "rent", "position", "name", and possibly the size
+	//SO I'M going to comment out all the set stuff that we might not need
 	//it sets the name of the card
-	public void setName(String s);
+//	public void setName(String s);
 
 	//it returns the name of the card
 	public String getName();
 
 	//it sets the cost of the card
-	public void setCost(Double d);
+//	public void setCost(Double d);
 
 	//it returns the cost of the card
 	public Double getCost();
@@ -19,13 +21,13 @@ public interface IPropertyCard
 	public boolean getAvailable();
 
 	//it sets the rents using a list/staticArray 
-	public void setRent(int[] r);
+//	public void setRent(int[] r);
 
 	//it returns the list of the rents
 	public int[] getRent();
 
 	//it sets the color of the card
-	public void setColor(Color c);
+//	public void setColor(Color c);
 
 	//it returns the color of the card
 	public Color getColor();
@@ -37,10 +39,10 @@ public interface IPropertyCard
 	public Pixel getPosition();
 
 	//it sets the Y-size of the card
-	public void setY(int y);
+//	public void setY(int y);
 
 	//it sets the X-size of the card
-	public void setX(int x);
+//	public void setX(int x);
 
 	//it returns the Y size of the card
 	public int getY();
@@ -54,5 +56,9 @@ public interface IPropertyCard
 	//it returns the type of the card
 	public String getType();
 
+	//it sets the owner
+	public void setOwner();
 
+	//it returns the owner
+	public String getOwner();
 }
