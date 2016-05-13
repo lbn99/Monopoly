@@ -2,7 +2,7 @@ import java.net.*;
 import java.util.*;
 import java.io.*;
 
-public class ServerSideClient  implements Runnable, IClient
+public class ServerSideClient implements Runnable, IPlayer
 {
 	private String handle;
 	private int id;
@@ -29,11 +29,6 @@ public class ServerSideClient  implements Runnable, IClient
     	handle = "Anon" + (rand.nextInt(900000)+100000);
     	
 //		addNetworkListener();
-		
-		for(IClient c : server.getClients())
-			if(c.getHandle() != handle)
-				c.send("ADD " + handle);
-		send("SETHANDLE " + handle);
     }
     
     public String getHandle()
@@ -89,4 +84,41 @@ public class ServerSideClient  implements Runnable, IClient
     	for(INetworkListener l : listenerList)
     		l.process(message, this, server);
     }
+    
+    //this would add the property to the list
+	public void add(IPropertyCard p){
+	}
+
+	//this returns the list of the IPropCard that the player has
+	public IPropertyCard[] getCards(){
+		return null;
+	}
+
+	//this removes certain card from the list 
+	public IPropertyCard remove(IPropertyCard p){
+		return null;
+	}
+
+	//this transacts money in or out of the account and returns the new amount
+	public Double transact(Double d){
+		return null;
+	}
+
+	//this returns the current amount of money
+	public Double getMoney(){
+		return null;
+	}
+
+	//this keeps track whehter it's this player's turn
+	public void setTurn(boolean b){
+	}
+
+	//this returns if it's his turn
+	public boolean getTurn(){
+		return false;
+	}
+
+	//this lets palyer buy and it adds to the list
+	public void buy(IPropertyCard p){
+	}
 }
