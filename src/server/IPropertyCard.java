@@ -1,4 +1,5 @@
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Point;
 
 public interface IPropertyCard
 {
@@ -14,7 +15,7 @@ public interface IPropertyCard
 //	public void setCost(Double d);
 
 	//it returns the cost of the card
-	public int getCost();
+	public Double getCost();
 
 	//it sets the boolean available to true or false accordingly
 	public void setAvailable(boolean b);
@@ -26,7 +27,7 @@ public interface IPropertyCard
 //	public void setRent(int[] r);
 
 	//it returns the list of the rents
-	public int getRent();
+	public int[] getRent();
 
 	//it sets the color of the card
 //	public void setColor(Color c);
@@ -34,11 +35,11 @@ public interface IPropertyCard
 	//it returns the color of the card
 	public Color getColor();
 
-	//it sets the position cordinate (lower left corner)
-//	public void setPosition(Pixel c);
+	//it sets the position coordinate (lower left corner)
+	public void setPosition(Point c);
 
 	//it returns the cordinate 
-	public Point getPoint();
+	public Point getPosition();
 
 	//it sets the Y-size of the card
 //	public void setY(int y);
@@ -47,19 +48,19 @@ public interface IPropertyCard
 //	public void setX(int x);
 
 	//it returns the Y size of the card
-//	public int getY();
+	public int getY();
 
 	//it returns the X size of the card
-//	public int getX();
+	public int getX();
 
 	//Lyndon, I'm not sure what this is going to do, so change it if it's wrong
-//	public void setType(String s);
+	public void setType(String s);
 
 	//it returns the type of the card
 	public String getType();
 
 	//it sets the owner
-	public void setOwner(String s);
+	public void setOwner();
 
 	//it returns the owner
 	public String getOwner();
