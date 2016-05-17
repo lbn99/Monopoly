@@ -27,11 +27,13 @@ public class Monopoly extends JFrame
 		
 		JPanel panel2 = new JPanel();
 		
+		State state = new State(new Point(436, 485));
+		
 		panel2.setLayout(new BorderLayout());
 		
 		this.add(panel2, BorderLayout.CENTER);
 		
-		BoardPanel board = new BoardPanel();
+		BoardPanel board = new BoardPanel(state);
 		panel2.add(board, BorderLayout.CENTER);
 		
 		JTextArea players = new JTextArea(50, 15);
@@ -51,15 +53,16 @@ public class Monopoly extends JFrame
 		panel2.add(cardMessage, BorderLayout.NORTH);
 		cardMessage.setEditable(false);
 		
-		JButton roll = new JButton("Roll");
-		bottom.add(roll);
-		
 		ImageIcon b = new ImageIcon("../dice1.png");
 		JLabel dice1 = new JLabel(b);
-		bottom.add(dice1);
-		
+	
 		ImageIcon c = new ImageIcon("../dice1.png");
 		JLabel dice2 = new JLabel(c);
+		
+		JButton roll = new FancyButton("Roll", dice1, dice2, cardMessage, board, state);
+		bottom.add(roll);
+		
+		bottom.add(dice1);
 		bottom.add(dice2);
 		
 		JButton buy = new JButton("Buy");
